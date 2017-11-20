@@ -15,7 +15,6 @@ class CoursesPage extends React.Component{
 
   render () {
     const { courses } = this.props;
-    debugger;
     return (
       <div>
         <h1> Courses</h1>
