@@ -62,7 +62,6 @@ ManageCoursePage.contextTypes = {
 };
 
 function getCourseById(courses, id) {
-  debugger;
   const course = courses.filter(course => course.id == id);
   if (course.length) return course[0];
   return null;
