@@ -16,8 +16,8 @@ export class ManageCoursePage extends React.Component {
       saving: false
     };
 
-    this.updateCourseState = this.updateCourseState.bind(this);
     this.saveCourse = this.saveCourse.bind(this);
+    this.updateCourseState = this.updateCourseState.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -109,12 +109,6 @@ function mapStateToProps(state, ownProps) {
     course = getCourseById(state.courses, courseId);
   }
 
-  const authorsFormattedForDropDown = state.authors.map((author) => {
-    return {
-      value: author.id,
-      text: author.firstName + ' '  + author.lastName
-    };
-  });
   return {
     course: course,
     authors: authorsFormattedForDropDown(state.authors)
